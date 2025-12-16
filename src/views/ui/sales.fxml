@@ -102,7 +102,7 @@
                         <children>
                            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox">
                               <children>
-                                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" styleClass="sub-label" text="Transaction:" />
+                                 <Label fx:id="trnascationsLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" styleClass="sub-label" text="Transaction:" />
                                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" styleClass="sub-label" text="0" />
                               </children>
                            </VBox>
@@ -120,15 +120,15 @@
                         <children>
                            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="556.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="27.0" prefWidth="79.0" text="Bar code: " HBox.hgrow="ALWAYS" />
+                                 <Label fx:id="codeLabel" prefHeight="27.0" prefWidth="79.0" text="Bar code: " HBox.hgrow="ALWAYS" />
                                  <TextField HBox.hgrow="ALWAYS" />
-                                 <Label prefHeight="27.0" prefWidth="59.0" text="Quanity: " HBox.hgrow="ALWAYS">
+                                 <Label fx:id="quantityLabel" prefHeight="27.0" prefWidth="59.0" text="Quanity: " HBox.hgrow="ALWAYS">
                                     <HBox.margin>
                                        <Insets left="30.0" />
                                     </HBox.margin>
                                  </Label>
                                  <TextField prefHeight="27.0" prefWidth="66.0" />
-                                 <Label prefHeight="27.0" prefWidth="59.0" text="Unit price:" HBox.hgrow="ALWAYS">
+                                 <Label fx:id="unitPriceLabel" prefHeight="27.0" prefWidth="59.0" text="Unit price:" HBox.hgrow="ALWAYS">
                                     <HBox.margin>
                                        <Insets left="30.0" />
                                     </HBox.margin>
@@ -141,11 +141,11 @@
                            </HBox>
                            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="556.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="27.0" prefWidth="79.0" text="Description:" HBox.hgrow="ALWAYS" />
+                                 <Label fx:id="descriptionLabel" prefHeight="27.0" prefWidth="79.0" text="Description:" HBox.hgrow="ALWAYS" />
                                  <TextField prefHeight="27.0" prefWidth="297.0" HBox.hgrow="ALWAYS" />
-                                 <Label prefHeight="27.0" prefWidth="59.0" text="Sub Total" HBox.hgrow="ALWAYS">
+                                 <Label fx:id="subTotalLabel" prefHeight="27.0" prefWidth="74.0" text="Sub Total:" HBox.hgrow="ALWAYS">
                                     <HBox.margin>
-                                       <Insets left="30.0" />
+                                       <Insets left="10.0" />
                                     </HBox.margin>
                                  </Label>
                                  <TextField prefHeight="27.0" prefWidth="66.0" />
@@ -176,7 +176,7 @@
                         <children>
                            <HBox prefHeight="37.0" prefWidth="182.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Net Total:" />
+                                 <Label fx:id="netTotalLabel" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Net Total:" />
                                  <Label fx:id="net_total" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="0.00" />
                               </children>
                               <padding>
@@ -184,7 +184,7 @@
                               </padding></HBox>
                            <HBox prefHeight="37.0" prefWidth="182.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Discount:">
+                                 <Label fx:id="discountLabel" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Discount:">
                                     <HBox.margin>
                                        <Insets />
                                     </HBox.margin>
@@ -200,23 +200,23 @@
                               </padding></HBox>
                            <HBox prefHeight="37.0" prefWidth="182.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Payable Total:" />
+                                 <Label fx:id="toPayTotalLabel" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Payable Total:" />
                                  <Label fx:id="payable_total" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="0.00" />
                               </children>
                               <padding>
                                  <Insets left="10.0" />
                               </padding></HBox>
-                           <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add discount">
+                           <Button fx:id="discountBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add discount">
                               <VBox.margin>
                                  <Insets top="30.0" />
                               </VBox.margin>
                            </Button>
-                           <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add Custom Fee">
+                           <Button fx:id="customFeeBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add Custom Fee">
                               <VBox.margin>
                                  <Insets top="10.0" />
                               </VBox.margin>
                            </Button>
-                           <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add To Credit">
+                           <Button fx:id="creditBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="add To Credit">
                               <VBox.margin>
                                  <Insets top="10.0" />
                               </VBox.margin>

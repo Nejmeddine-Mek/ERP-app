@@ -28,8 +28,8 @@ public class App extends Application{
     public void start(@SuppressWarnings("exports") Stage primaryStage) {
 		Parent root;
 		try {
-			LanguageManager.setLanguage("en");
-			root = FXMLLoader.load(getClass().getResource("/views/ui/register.fxml"));
+			LanguageManager.setLanguage("ar");
+			root = FXMLLoader.load(getClass().getResource("/views/ui/sales.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();

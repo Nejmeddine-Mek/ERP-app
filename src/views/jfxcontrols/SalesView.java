@@ -4,6 +4,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
+import app.LanguageManager;
 import javafx.application.Platform;
 
 import javafx.fxml.FXML;
@@ -30,11 +31,25 @@ public class SalesView implements Initializable{
 	@FXML private Label occupation;
 	@FXML private Label date;
 	
+	@FXML private Label codeLabel;
+	@FXML private Label quantityLabel;
+	@FXML private Label unitPriceLabel;
+	@FXML private Label descriptionLabel;
+	@FXML private Label subTotalLabel;
+	
+	@FXML private Label netTotalLabel;
+	@FXML private Label discountLabel;
+	@FXML private Label toPayTotalLabel;
+	@FXML private Label trnascationsLabel;
 	
 	@FXML private Label total_label;
 	@FXML private Label payable_total;
 	@FXML private Label discount;
 	@FXML private Label net_total;
+	
+	@FXML private Button discountBtn;
+	@FXML private Button customFeeBtn;
+	@FXML private Button creditBtn;
 	
 	@FXML private TableView<ProductView> table;
 	@FXML private TableColumn<ProductView,Integer> idColumn;
@@ -56,6 +71,34 @@ public class SalesView implements Initializable{
 		// TODO Auto-generated method stub
 		// first of all, we must set the default behavior of buttons in run later
 		Platform.runLater(() -> {
+			// set the text on the labels
+			{
+				ResourceBundle bundle = LanguageManager.getBundle();
+				this.pos.setText(bundle.getString("sales.pos"));
+				this.products.setText(bundle.getString("sales.products"));
+				this.clients.setText(bundle.getString("sales.clients"));
+				this.suppliers.setText(bundle.getString("sales.suppliers"));
+				this.history.setText(bundle.getString("sales.history"));
+				this.dashboard.setText(bundle.getString("sales.dashboard"));
+				this.codeLabel.setText(bundle.getString("sales.code"));
+				this.quantityLabel.setText(bundle.getString("sales.quantity"));
+				this.unitPriceLabel.setText(bundle.getString("sales.unitPrice"));
+				this.subTotalLabel.setText(bundle.getString("sales.subTotal"));
+				this.idColumn.setText(bundle.getString("sales.id"));
+				this.descriptionColumn.setText(bundle.getString("sales.description"));
+				this.unitPriceColumn.setText(bundle.getString("sales.unitPrice"));
+				this.quantityColumn.setText(bundle.getString("sales.qty"));
+				this.subTotalColumn.setText(bundle.getString("sales.subTotal"));
+				this.netTotalLabel.setText(bundle.getString("sales.netTotal"));
+				this.discountLabel.setText(bundle.getString("sales.discount"));
+				this.toPayTotalLabel.setText(bundle.getString("sales.totalPay"));
+				this.trnascationsLabel.setText(bundle.getString("sales.trnasactions"));
+				this.discountBtn.setText(bundle.getString("sales.addDiscount"));
+				this.customFeeBtn.setText(bundle.getString("sales.customFee"));
+				this.creditBtn.setText(bundle.getString("sales.addCredit"));
+				
+				
+			}
 			// on each window, we don't reload the page when clicking on it's button
 			//this.price.setCellFactory(TextFieldTableCell.forTableColumn(new FloatStringConverter()));
 			this.idColumn.setCellValueFactory(cell -> cell.getValue().idProperty().asObject());
