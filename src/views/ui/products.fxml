@@ -103,9 +103,9 @@
                         <children>
                            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="556.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="27.0" prefWidth="102.0" text="Product Name:" HBox.hgrow="ALWAYS" />
+                                 <Label fx:id="productName" prefHeight="27.0" prefWidth="102.0" text="Product Name:" HBox.hgrow="ALWAYS" />
                                  <TextField fx:id="nameSearchField" prefHeight="27.0" prefWidth="124.0" HBox.hgrow="ALWAYS" />
-                                 <Label prefHeight="27.0" prefWidth="59.0" text="bar code" HBox.hgrow="ALWAYS">
+                                 <Label fx:id="barCodeLabel" prefHeight="27.0" prefWidth="59.0" text="bar code" HBox.hgrow="ALWAYS">
                                     <HBox.margin>
                                        <Insets left="30.0" />
                                     </HBox.margin>
@@ -142,13 +142,13 @@
                         <children>
                            <HBox prefHeight="49.0" prefWidth="182.0" styleClass="hbox">
                               <children>
-                                 <Label prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Total Products:" />
+                                 <Label fx:id="totalProductsLabel" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="Total Products:" />
                                  <Label fx:id="clientsCount" prefHeight="38.0" prefWidth="92.0" styleClass="sub-label" text="0.00" />
                               </children>
                               <padding>
                                  <Insets left="10.0" top="10.0" />
                               </padding></HBox>
-                           <Button mnemonicParsing="false" onAction="#clickShowForm" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="Add Product">
+                           <Button fx:id="addProductBtn" mnemonicParsing="false" onAction="#clickShowForm" prefHeight="39.0" prefWidth="147.0" styleClass="accountant-btn" text="Add Product">
                               <VBox.margin>
                                  <Insets top="10.0" />
                               </VBox.margin>
@@ -190,7 +190,7 @@
                                        <Insets bottom="15.0" />
                                     </VBox.margin>
                                  </TextField>
-                                 <Button mnemonicParsing="false" onAction="#clickAddProduct" prefHeight="34.0" prefWidth="107.0" styleClass="accountant-btn" text="Add">
+                                 <Button fx:id="addBtn" mnemonicParsing="false" onAction="#clickAddProduct" prefHeight="34.0" prefWidth="107.0" styleClass="accountant-btn" text="Add">
                                     <VBox.margin>
                                        <Insets top="40.0" />
                                     </VBox.margin>

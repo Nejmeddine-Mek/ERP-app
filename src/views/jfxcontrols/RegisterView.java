@@ -46,7 +46,7 @@ public class RegisterView implements Initializable{
 		for(int i = 0; i < User.MAX_PRIVILEGE; i++) {
 			MenuItem mi = new MenuItem();
 			mi.setText(User.whichOccupation((byte)i));
-			mi.setOnAction(e -> pmenu.setText(mi.getText()));
+			mi.setOnAction(_ -> pmenu.setText(mi.getText()));
 			//mi.getStyleClass().add(".menu-option");
 			mi.setStyle("-fx-text-fill: rgb(36, 156, 255);");
 			pmenu.getItems().add(mi);

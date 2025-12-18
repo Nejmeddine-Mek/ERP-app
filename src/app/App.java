@@ -29,7 +29,7 @@ public class App extends Application{
 		Parent root;
 		try {
 			LanguageManager.setLanguage("ar");
-			root = FXMLLoader.load(getClass().getResource("/views/ui/sales.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/views/ui/products.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
