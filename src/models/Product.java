@@ -1,25 +1,34 @@
 package models;
 
+import java.time.LocalDateTime;
+
 public class Product {
-	
+	private int id;
 	private String barCode;
 	private String description;
+	private String category;
 	private float selling_price;
 	private float buying_price;
 	private int stock;
 	private boolean hasDiscount;
 	private int discountQ;
 	private float discountPrice;
-	
-	public Product(String bc, String description, float bp, float sp, boolean hasDiscount, int disq, float discp) {
+	LocalDateTime createdOn;
+	LocalDateTime updatedOn;
+	public Product(int id, String bc, String description,String c, float bp, float sp, boolean hasDiscount, int disq, float discp
+			, LocalDateTime co, LocalDateTime uo) {
+		this.id = id;
 		barCode = bc;
 		this.description = description;
+		this.category = c;
 		this.selling_price = sp;
 		this.buying_price = bp;
 		this.stock = 0;
 		this.hasDiscount = hasDiscount;
 		this.discountQ = disq;
 		this.discountPrice = discp;
+		this.createdOn = co;
+		this.updatedOn = uo;
 	}
 	public void setDescription(String description) {
 		this.description = description;

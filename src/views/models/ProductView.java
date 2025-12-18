@@ -11,7 +11,7 @@ public class ProductView {
 	private SimpleIntegerProperty quantity;
 	private SimpleFloatProperty sellingPrice;
 	private SimpleFloatProperty buyingPrice;
-	private SimpleFloatProperty subTotal;
+	// this thing will be used in the products window, we use the index in the sales window!
 	public ProductView(String description, float sellP,float buyP) {
 		this.id = new SimpleIntegerProperty();
 		this.id.set(IDGen++);
@@ -23,8 +23,7 @@ public class ProductView {
 		this.sellingPrice.set(sellP);
 		this.quantity = new SimpleIntegerProperty();
 		this.quantity.set(1);
-		this.subTotal = new SimpleFloatProperty();
-		this.subTotal.set(sellP);
+		
 	}
 	public SimpleStringProperty descriptionProperty() {
 		return this.description;
@@ -32,9 +31,7 @@ public class ProductView {
 	public SimpleFloatProperty sellinPriceProperty() {
 		return this.sellingPrice;
 	}
-	public SimpleFloatProperty subTotalProperty() {
-		return this.subTotal;
-	}
+
 	public SimpleIntegerProperty quantityProperty() {
 		return this.quantity;
 	}

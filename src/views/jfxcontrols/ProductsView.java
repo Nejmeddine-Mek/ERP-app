@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import app.LanguageManager;
+import controls.ProductsController;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -56,6 +57,8 @@ public class ProductsView implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		Platform.runLater(() -> {
+			ProductsController pc = new ProductsController();
+			// then we must load from the views from the thing!
 			this.detailsFieldBox.setVisible(false);
 			// set the text
 			{
